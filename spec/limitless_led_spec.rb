@@ -4,7 +4,7 @@ describe LimitlessLed do
 
   let(:params) { {} }
 
-  subject { LimitlessLed::Bridge.new() }
+  subject { LimitlessLed::Bridge.new }
 
   describe 'can be initialized with default values' do
     its(:host) { should == 'localhost' }
@@ -18,8 +18,8 @@ describe LimitlessLed do
     its(:port) { should == 6666 }
   end
 
-  describe "#color" do
-    it "changes color" do
+  describe '#color' do
+    it 'changes color' do
       subject.should_receive(:send_packet).with("\xc2\x00\x55")
     end
   end
@@ -29,11 +29,11 @@ describe LimitlessLed do
 
       fake_socket = double(:fake_udp_socket)
       fake_socket.should_receive(:connect).with( subject.host, subject.port )
-      fake_socket.should_receive(:send).with("stuff", 0)
+      fake_socket.should_receive(:send).with('stuff', 0)
 
       UDPSocket.should_receive(:new) { fake_socket }
 
-      subject.send(:send_packet, "stuff")
+      subject.send(:send_packet, 'stuff')
 
     end
   end
