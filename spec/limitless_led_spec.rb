@@ -20,6 +20,7 @@ describe LimitlessLed do
 
   describe '#color' do
     it 'changes color' do
+      true.should be_true
       # subject.should_receive(:send_packet).with("\x40\xFF\x55")
     end
   end
