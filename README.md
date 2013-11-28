@@ -1,5 +1,6 @@
 # LimitlessLed
 
+[![Build Status](https://travis-ci.org/jpsilvashy/limitless-led.png?branch=master)](https://travis-ci.org/jpsilvashy/limitless-led)
 
 ## Installation
 
