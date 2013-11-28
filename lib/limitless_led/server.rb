@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 require 'eventmachine'
 
 require 'date'
@@ -6,6 +8,7 @@ require 'color'
 
 module LimitlessLed
   class Server < EM::Connection
+    include LimitlessLed::Logger
 
     def initialize(host: 'localhost', port: 8899)
       @bridge = LimitlessLed::Bridge.new(host: host, port: port)
