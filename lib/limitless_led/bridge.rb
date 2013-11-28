@@ -3,14 +3,14 @@ require 'socket'
 module LimitlessLed
   class Bridge
 
-    VALID_COMMANDS = (65..77).to_a
-
-    attr_reader :host, :port
+    attr_accessor :host, :port
 
     def initialize(host: 'localhost', port: 8899)
       @host = host
       @port = port
     end
+
+    VALID_COMMANDS = (65..77).to_a
 
     def socket
       @socket ||= begin
