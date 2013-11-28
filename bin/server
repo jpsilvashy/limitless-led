@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby -s
+
+require 'optparse'
+require 'eventmachine'
+require 'limitless_led'
+
+options = { port: 8899 }
+puts options
+puts ARGV
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: server [options]"
+
+  opts.on('--port', '-p', Integer, "Port to run UDP server on you localhost") do |p|
+    options[:port] = p
+  end
+
+  opts.on("--[no-]verbose", "-v", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+
+end.parse!
+
+puts ">> Starting Limitless LED Server running on port: #{options[:port]}"
+
+EM.run do
+  EM.open_datagram_socket('0.0.0.0', options[:port], LimitlessLed::Server)
+end
