@@ -20,5 +20,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
-end
 
+  spec.add_runtime_dependency "color"
+  spec.add_runtime_dependency "rainbow"
+
+end

@@ -18,8 +18,6 @@ describe LimitlessLed do
     its(:port) { should == 6666 }
   end
 
-  #let(:room) { subject["Hipchat"] }
-
   describe "#color" do
     it "changes color" do
       subject.should_receive(:send_packet).with("\xc2\x00\x55")
