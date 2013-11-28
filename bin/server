@@ -1,25 +1,22 @@
-#!/usr/bin/env ruby -s
+#!/usr/bin/env ruby
 
 require 'optparse'
 require 'eventmachine'
 require 'limitless_led'
 
-options = { port: 8899 }
-puts options
-puts ARGV
+options = {}
 
-OptionParser.new do |opts|
+optparse = OptionParser.new do|opts|
   opts.banner = "Usage: server [options]"
 
-  opts.on('--port', '-p', Integer, "Port to run UDP server on you localhost") do |p|
-    options[:port] = p
-  end
+  options[:port] = 8899
 
-  opts.on("--[no-]verbose", "-v", "Run verbosely") do |v|
-    options[:verbose] = v
+  opts.on( '-p', '--port [PORT]', "Optional port" ) do|f|
+    options[:port] = f
   end
+end
 
-end.parse!
+optparse.parse!
 
 puts ">> Starting Limitless LED Server running on port: #{options[:port]}"
 
