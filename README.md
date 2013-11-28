@@ -1,12 +1,11 @@
 # LimitlessLed
 
-TODO: Write a gem description
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'limitless_led'
+    gem 'limitless-led'
 
 And then execute:
 
@@ -14,7 +13,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install limitless_led
+    $ gem install limitless-led
 
 ## Usage
 
