@@ -71,7 +71,7 @@ module LimitlessLed
           raise "Not implemented"
 
         else
-          log "invalid command recieved: #{command.first}: #{command}"
+          log "invalid command received: #{command.first}: #{command}"
       end
     end
 
