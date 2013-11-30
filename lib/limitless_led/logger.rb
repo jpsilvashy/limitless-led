@@ -18,7 +18,7 @@ module LimitlessLed
       blue  = color.b * 255
 
       # Log the color and the hex of the color
-      log "████████ ".color(red, green, blue) + color.html
+      log '████████ '.color(red, green, blue) + color.html
 
     end
 

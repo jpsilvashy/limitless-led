@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+  #!/usr/bin/ruby
 require "limitless_led/version"
 
 require "limitless_led/logger"
