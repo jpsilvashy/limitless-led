@@ -4,15 +4,12 @@ require 'optparse'
 require 'eventmachine'
 require 'limitless_led'
 
-options = {}
+options = { port: 8899 }
 
-optparse = OptionParser.new do|opts|
+optparse = OptionParser.new do |opts|
   opts.banner = "Usage: server [options]"
-
-  options[:port] = 8899
-
-  opts.on( '-p', '--port [PORT]', "Optional port" ) do|f|
-    options[:port] = f
+  opts.on('-p', '--port [PORT]', "Optional port") do |port|
+    options[:port] = port
   end
 end
 

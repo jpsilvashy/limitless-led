@@ -7,10 +7,19 @@ module LimitlessLed
       puts "#{DateTime.now.to_s} : #{message}"
     end
 
+    # this receives and integer as the color value from 0-255, this value
+    # maps directly to the dial on the limitless-led controller and app where
+    # the color at 12 o'clock is 0, the colors are mapped clockwise around
+    # the dial with 255 being almost the same color as 0, this is because the
+    # color space we are using is HSL.
     def log_color(color)
 
-      #
-      color = color.to_rgb
+      # Turn second byte int a value out of 360, this is because HSL color maps
+      # the hue on a radial scale so the first and last values are the same color
+      hue= color.to_f / 255.0 * 360.0
+
+      # Return the color
+      color = Color::HSL.new( hue, 100, 50).to_rgb
 
       # Get each channel and prepare for loggers output
       red   = color.r * 255

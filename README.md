@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'limitless_led'
+
+    bridge = LimitlessLed::Bridge.new
+
 
 ## Contributing
 
