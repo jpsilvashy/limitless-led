@@ -10,7 +10,7 @@ require 'miro'
 require 'limitless_led'
 
 # Source of image
-colors = Miro::DominantColors.new('http://cdn.abclocal.go.com/three/kgo/webcam/baybridge.jpg')
+colors = Miro::DominantColors.new('http://cdn.abclocal.go.com/three/kgo/webcam/tahoecam.jpg')
 
 # Connect to bridge
 bridge = LimitlessLed::Bridge.new(host: 'localhost', port: 8899)
