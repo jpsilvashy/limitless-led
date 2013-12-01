@@ -22,13 +22,33 @@ module LimitlessLed
       end
     end
 
-    # this sends the actual bytes to the real bridge/led over the UDP socket method
+    # Sends the actual bytes to the real bridge/led over the UDP socket method.
+    #
+    # Usage:
+    #
+    #   # Default
+    #   send_packet "\x40\xff\x55"
+    #
+    # Options:
+    #
+    # +packet+::  the bytes to send to the device
+    #
     def send_packet(packet)
       socket.send packet, 0
     end
 
     # This sets the color of the LED with a hex value for the color the packets
     # are sent to the socket for the command
+    #
+    # Usage:
+    #
+    #   # Default
+    #   color '#ff0000'
+    #
+    # Options:
+    #
+    # +color+::  The color in the hex format rrggbb or rgb
+    #
     def color(color)
 
       # receive color as string like #ff0000 or a triplet

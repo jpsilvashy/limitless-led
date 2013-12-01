@@ -16,8 +16,18 @@ module LimitlessLed
 
     # This method dispatches the raw command in bytes to the proper method used
     # to run commands for the led the first byte in the command code tells the
-    # real led which command to expect, most commands are 3-4 bytes long total
+    # real led which command to expect, most commands are 3 bytes long total
     # and always end with 0x55
+    #
+    # Usage:
+    #
+    #   # Default
+    #   receive_data "\x40\xff\x55"
+    #
+    # Options:
+    #
+    # +input+::  bytes used to run the commands
+    #
     def receive_data(input)
       command = input.bytes
 
