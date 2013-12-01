@@ -27,6 +27,8 @@ module LimitlessLed
       socket.send packet, 0
     end
 
+    # This sets the color of the LED with a hex value for the color the packets
+    # are sent to the socket for the command
     def color(color)
 
       # receive color as string like #ff0000 or a triplet
