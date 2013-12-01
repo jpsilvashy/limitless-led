@@ -59,7 +59,7 @@ _View more demos in the [/examples](https://github.com/jpsilvashy/limitless-led/
 
 If you are using the development server you should see this output:
 
-![Output](https://www.evernote.com/shard/s5/sh/df5047a2-faa4-4985-98a7-63d86d8a131d/e45fb64438bc946c37c13d88c2dd412d/deep/0/output.jpg)
+![Output](https://www.evernote.com/shard/s5/sh/8d51bc75-7d2b-4e23-a3c8-05e5742ec333/89bd43c12107a6e2d69bad91a526220c/deep/0/server.jpg)
 
 **As a note,** since we are transforming the colors from RGB to HSL and then back for representing the color in the console (which additionally is more limiting than the true color space offered by the LED) some of the hex values may not exactly match, especially near the dark limit. Since we are controlling the the brightness of the LED separately, and do not have access to the saturation some colors maybe be harder to reproduce than others, especially dark colors.
 
