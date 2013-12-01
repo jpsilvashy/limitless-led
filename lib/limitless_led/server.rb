@@ -25,9 +25,9 @@ module LimitlessLed
       when 64
         log_color command[1]
       when 65..77
-        raise 'command not implemented'
+        raise LimitlessLed::CommandNotImplemented
       else
-        log "invalid command received: #{command.first}: #{command}"
+        raise LimitlessLed::UnknownCommand
       end
 
     end
