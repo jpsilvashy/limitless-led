@@ -45,6 +45,12 @@ module LimitlessLed
     #   # Default
     #   color '#ff0000'
     #
+    #   # Triplet
+    #   color '#f00'
+    #
+    #   # Optional "#"
+    #   color 'ff0000'
+    #
     # Options:
     #
     # +color+::  The color in the hex format rrggbb or rgb
@@ -52,6 +58,7 @@ module LimitlessLed
     def color(color)
 
       # receive color as string like #ff0000 or a triplet
+      # transform to HSL color
       color = Color::RGB.from_html(color).to_hsl
 
       # Transform color into value out of 255
