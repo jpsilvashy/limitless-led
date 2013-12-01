@@ -2,11 +2,15 @@
 
 [![Build Status](https://travis-ci.org/jpsilvashy/limitless-led.png?branch=master)](https://travis-ci.org/jpsilvashy/limitless-led)
 
+A Ruby gem for controlling the [LimitlessLED v3.0 RGBW color-changing light bulbs](http://www.limitlessled.com/), based on the official [LimitlessLED API documentation](http://www.limitlessled.com/dev/).
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'limitless-led'
+``` ruby
+gem 'limitless-led'
+```
 
 And then execute:
 
@@ -40,10 +44,16 @@ server = LimitlessLed::Server.new(host: 'localhost', port: 8899)
 server.receive_data("\x40\x00\xff")
 ```
 
-## Contributing
+## Contributors
+This originally was a fork of [hired/limitless-led](https://github.com/hired/limitless-led) but quickly grew larger in scope so I decided to move it to a new repo.
 
+- [Nate Clark](https://github.com/heythisisnate)
+- [Curtis Gagliardi](https://github.com/cgag)
+
+## Contributing
 1. Fork it ( http://github.com/jpsilvashy/limitless-led/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
