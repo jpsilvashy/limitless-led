@@ -70,14 +70,6 @@ describe LimitlessLed::Bridge do
       subject.send(:send_packet, "\x40\xFF\x55")
 
     end
-
-    it 'should raise an exception when improperly formed commands are sent' do
-      # subject.send(:send_packet, "\x40\xFF\x55")
-      # subject.should_receive(:new) { fake_socket }
-      should raise_error(HipChat::UnknownResponseCode)
-    end
   end
 
 end
-
-
