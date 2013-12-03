@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = LimitlessLed::VERSION
   spec.authors       = ["Joseph Silvashy"]
   spec.email         = ["jpsilvashy@gmail.com"]
-  spec.summary       = %q{Control the LimitlessLED}
-  spec.description   = %q{}
-  spec.homepage      = ""
+  spec.summary       = %q{A Ruby gem for controlling the LimitlessLED v3.0 RGBW color-changing light bulbs.}
+  spec.description   = %q{A Ruby gem for controlling the LimitlessLED v3.0 RGBW color-changing light bulbs, based on the official LimitlessLED API documentation.}
+  spec.homepage      = "https://github.com/jpsilvashy/limitless-led"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

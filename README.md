@@ -46,7 +46,6 @@ bridge.send_packet "\x40\x00\x55"
   end
 end
 
-
 # Again if you don't have the LimitlessLED, you can create an instance
 # of the development server
 server = LimitlessLed::Server.new(host: 'localhost', port: 8899)
