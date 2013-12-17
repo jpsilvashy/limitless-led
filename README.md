@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jpsilvashy/limitless-led.png?branch=master)](https://travis-ci.org/jpsilvashy/limitless-led)
 [![Code Climate](https://codeclimate.com/github/jpsilvashy/limitless-led.png)](https://codeclimate.com/github/jpsilvashy/limitless-led)
+[![Coverage Status](https://coveralls.io/repos/jpsilvashy/limitless-led/badge.png)](https://coveralls.io/r/jpsilvashy/limitless-led)
 
 A Ruby gem for controlling the [LimitlessLED v3.0 RGBW color-changing light bulbs](http://www.limitlessled.com/), based on the official [LimitlessLED API documentation](http://www.limitlessled.com/dev/).
 
