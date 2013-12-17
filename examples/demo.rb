@@ -30,6 +30,3 @@ server = LimitlessLed::Server.new(host: 'localhost', port: 8899)
 
 # Then you can see what the server does when it receives messages
 server.receive_data("\x40\x00\xff")
-
-
-

@@ -1,6 +1,7 @@
 # LimitlessLed
 
 [![Build Status](https://travis-ci.org/jpsilvashy/limitless-led.png?branch=master)](https://travis-ci.org/jpsilvashy/limitless-led)
+[![Dependency Status](https://gemnasium.com/jpsilvashy/limitless-led.png)](https://gemnasium.com/jpsilvashy/limitless-led)
 [![Code Climate](https://codeclimate.com/github/jpsilvashy/limitless-led.png)](https://codeclimate.com/github/jpsilvashy/limitless-led)
 [![Coverage Status](https://coveralls.io/repos/jpsilvashy/limitless-led/badge.png)](https://coveralls.io/r/jpsilvashy/limitless-led)
 
@@ -47,7 +48,6 @@ bridge.send_packet "\x40\x00\x55"
     sleep 0.005
   end
 end
-
 
 # Again if you don't have the LimitlessLED, you can create an instance
 # of the development server
